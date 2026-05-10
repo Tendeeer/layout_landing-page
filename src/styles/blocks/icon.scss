@@ -1,5 +1,5 @@
 .icon {
-  display: block;
+  display: inline-block;
   width: 24px;
   height: 24px;
   background-position: center;
@@ -7,15 +7,12 @@
 
   &:hover {
     @include hover(transform, scale(1.2));
+
   }
 
   @include on-tablet {
     width: 32px;
     height: 32px;
-  }
-
-  &--phone {
-    background-image: url(/src/images/icon-phone.svg);
   }
 
   &--menu {
@@ -28,5 +25,34 @@
 
   &--close {
     background-image: url(/src/images/close.svg);
+  }
+
+  &--phone {
+    background-image: url(/src/images/icon-phone.svg);
+    position: relative;
+
+    @include on-tablet {
+      &:hover .icon__number {
+      opacity: 1;
+      display: block;
+      }
+    }
+  }
+  &__number {
+    display: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: $background-cl;
+
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 12px);
+    transform: translateY(-50%);
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+    pointer-events: none;
   }
 }

@@ -1,0 +1,32 @@
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    @include hover(transform, scale(1.2));
+  }
+
+  @include on-tablet {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--phone {
+    background-image: url(/src/images/icon-phone.svg);
+  }
+
+  &--menu {
+    background-image: url(/src/images/burger-menu.svg);
+
+    &:hover {
+      background-image: url(/src/images/menu-hover.svg);
+    }
+  }
+
+  &--close {
+    background-image: url(/src/images/close.svg);
+  }
+}

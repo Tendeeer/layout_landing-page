@@ -16,19 +16,19 @@
   }
 
   &--menu {
-    background-image: url(/src/images/burger-menu.svg);
+    background-image: url(../images/burger-menu.svg);
 
     &:hover {
-      background-image: url(/src/images/menu-hover.svg);
+      background-image: url(../images/menu-hover.svg);
     }
   }
 
   &--close {
-    background-image: url(/src/images/close.svg);
+    background-image: url(../images/close.svg);
   }
 
   &--phone {
-    background-image: url(/src/images/icon-phone.svg);
+    background-image: url(../images/icon-phone.svg);
     position: relative;
 
     @include on-tablet {
